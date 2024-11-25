@@ -8,7 +8,7 @@ Route::GET('/', [HomeController::class, 'index'])->name('home');
 Route::GET('/jobs', [JobsController::class, 'index'])->name('jobs');
 
 Route::group(['prefix' =>'account'], function()
-{
+{  
     //guest routes
     Route::group(['middleware' => 'guest'] , function()
     {
